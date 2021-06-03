@@ -26,7 +26,7 @@ samples_dir: samples
 atlas_dir: atlas
 
 # directory that contains all scripts used during the pipeline
-script_dir: ../scripts
+script_dir: scripts
 
 # scripts subdir with small snakemake-specific scripts
 # (this avoids long blocks for the run directive)
@@ -50,18 +50,18 @@ ucsc_db: hg38
 # download the genome as fasta file
 # and store it as given
 genome_fasta_url: "ftp://ftp.ensembl.org/pub/release-96/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa.gz"
-genome_fasta_raw: ../annotation/Homo_sapiens.GRCh38.96.dna_sm.primary_assembly.fa
-genome_fasta: ../annotation/Homo_sapiens.GRCh38.96.dna_sm.primary_assembly.clean.fa
+genome_fasta_raw: annotation/Homo_sapiens.GRCh38.96.dna_sm.primary_assembly.fa
+genome_fasta: annotation/Homo_sapiens.GRCh38.96.dna_sm.primary_assembly.clean.fa
 # download the genome annotation as gtf file
 # and store it as given
-annotation_dir: ../annotation
+annotation_dir: annotation
 gene_anno_url: "ftp://ftp.ensembl.org/pub/release-96/gtf/homo_sapiens/Homo_sapiens.GRCh38.96.chr_patch_hapl_scaff.gtf.gz"
-gene_annotation: ../annotation/Homo_sapiens.GRCh38.96.chr_patch_hapl_scaff.gtf
-gene_annotation_filtered: ../annotation/Homo_sapiens.GRCh38.96.protein_coding.lincRNA.gtf
+gene_annotation: annotation/Homo_sapiens.GRCh38.96.chr_patch_hapl_scaff.gtf
+gene_annotation_filtered: annotation/Homo_sapiens.GRCh38.96.protein_coding.lincRNA.gtf
 
 # Download chromosome sizes from UCSC for creating custom genome browser tracks
 ucsc_chromSizes_URL: "http://hgdownload.cse.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
-ucsc_chromSizes_file: ../annotation/Homo_sapiens.GRCh38_UCSC.chrom_sizes
+ucsc_chromSizes_file: annotation/Homo_sapiens.GRCh38_UCSC.chrom_sizes
 
 # Name under which the atlas will be published on the website
 # ATTENTION: for each organism, the release name should be unique!
@@ -70,7 +70,7 @@ ucsc_chromSizes_file: ../annotation/Homo_sapiens.GRCh38_UCSC.chrom_sizes
 atlas.release_name: xx
 
 # Filename of the design file (mandatory input file)
-atlas.samples_table: EXAMPLE_samples.tsv
+atlas.samples_table: tests/EXAMPLE_samples.tsv
 
 # filtered version of the annotation:
 # only transcript with a certain support level and of certain types
