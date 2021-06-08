@@ -16,7 +16,7 @@ snakemake \
 -p \
 --configfile config.yaml \
 --use-singularity \
---jobscript cluster_qsub.sh \
+--jobscript sge_cluster_qsub.sh \
 --singularity-args "--bind ${PWD}" \
 --cluster-config cluster_config.json \
 --cluster-sync "qsub -R y -l tmem={cluster.mem},h_vmem={cluster.mem},h_rt={cluster.time} -pe smp {cluster.threads} -o {params.cluster_log}" \
